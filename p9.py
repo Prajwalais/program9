@@ -10,3 +10,28 @@ if __name__ == "__main__":
     print(f"Weight: {weight} kg")
     print(f"Height: {height} m")
     print(f"BMI: {bmi:.1f}")
+
+
+
+def calculate_bmi(weight, height):
+    return weight / (height ** 2)
+
+def bmi_category(bmi):
+    if bmi < 18.5:
+        return "Underweight"
+    elif 18.5 <= bmi < 25:
+        return "Normal"
+    else:
+        return "Overweight"
+
+if __name__ == "__main__":
+    weight = float(input("Enter weight (kg): "))
+    height = float(input("Enter height (m): "))
+    
+    bmi = calculate_bmi(weight, height)
+    category = bmi_category(bmi)
+    
+    print(f"Weight: {weight} kg")
+    print(f"Height: {height} m")
+    print(f"BMI: {bmi:.1f}")
+    print(f"Category: {category}")
